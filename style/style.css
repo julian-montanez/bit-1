@@ -1,0 +1,505 @@
+body{
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+}
+
+:root{
+    --color-primario: #FB9434;
+    --color-secundario: #282828;
+}
+
+/*font-family*/
+
+@font-face {
+    font-family: "kode";
+    src: url(../fonts/Kode_Mono/KodeMono-VariableFont_wght.ttf) format(truetype);
+}
+
+/* navegador */
+
+.navegador{
+    width: 100vw;
+    min-width: 576px;
+    height:80px;
+    box-sizing: border-box;
+    background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: aliceblue;
+    z-index: 2;
+    flex-wrap: wrap;
+}
+
+.logo-dinamo{
+    width: 200px;
+}
+
+.opciones-central, .opciones-der{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-family: 'kode';
+    font-size: 24px;
+    margin-right: 30px;
+}
+
+.opciones-central > li, .opciones-der > li {
+    margin-left: 30px;
+}
+
+.opciones-central > li > a, .opciones-der > li > a {
+    text-decoration: none;
+    color: white;
+}
+
+.bi{
+    height: 30px;
+    width: 30px;
+}
+
+/* header */
+
+.slider-contenedor{
+    width: 100vw;
+    min-width: 576px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
+    width: 300vw;
+    height: 750px;
+}
+
+.slider-seccion{
+    width: 300vw;
+    height: 750px;
+    background-color: blueviolet;
+    box-sizing: border-box;
+}
+
+.seccion2{
+    background-color: aqua;
+}
+
+.seccion3{
+    background-color: yellowgreen;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 10px;
+    left: 43%;
+}
+
+.boton{
+    width: 50px;
+    height: 10px;
+    background-color: black;
+    margin-left: 15px;
+}
+
+/* main */
+
+/* primera parte */
+
+.parte-1{
+    width: 100vw;
+    height: 850px;
+    box-sizing: border-box;
+}
+
+.titulo-parte1{
+    text-align: center;
+    font-family: 'kode';
+    font-size: 48px;
+    font-weight: bolder;
+    color: var(--color-primario);
+    -webkit-text-stroke: 2px black;
+    margin-top: 50px;
+}
+
+.contenedor-parte1{
+    width: 90vw;
+    height: 700px;
+    background-color: chartreuse;
+    align-items: center;
+    box-sizing: border-box;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.informacion-producto, .imagenes-producto{
+    height: 650px;
+    background-color: azure;
+    box-sizing: border-box;
+    border: 3px solid black;
+    overflow: hidden;
+    position: relative;
+}
+
+.informacion-producto{
+    width: 40vw;
+    min-width: 500px;
+}
+
+.titulo-producto{
+    font-size: 2.2em;
+    margin: 30px 30px 0 30px;
+}
+
+.separador-1{
+    width: 38vw;
+    min-width: 480px;
+    height: 10px;
+    background-color: var(--color-primario);
+    border-radius: 10px;
+    margin: 30px 10px;
+}
+
+.contador{
+    width: 200px;
+    height: 55px;
+    background-color: var(--color-primario);
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.agregar-carrito{
+    width: 460px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+
+}
+
+.pagar-visa{
+    width: 460px;
+    height: 55px;
+    background-color: gray;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+
+}
+
+.ir-producto{
+    width: 270px;
+    height: 55px;
+    background-color: var(--color-primario);
+    border-radius: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.imagenes-producto{
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-imagen-principal{
+    width:425px;
+    height: 450px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.imagen-principal{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0px;
+}
+
+.mostrar-imagen{
+    width: 470px;
+    height: 420px;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.imagen-secundaria{
+    margin: 0 120px;
+    margin-top: 15px;
+}
+
+.contenedor-slider-imagenes-p1{
+    width: 300px;
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    background-color: aqua;
+    border: 2px solid black;
+}
+
+.slider-imagenes-p1{
+    display: flex;
+    flex-direction: row;
+}
+
+.vista-previa{
+    width: 100px;
+    height: 90px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+/* segunda parte */
+
+.parte-2{
+    width: 100vw;
+    min-width: 576px;
+    height: 800px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.im-2{
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+}
+
+.margen2{
+    width: 90vw;
+    height: 750px;
+    border: 3px solid black;
+    margin: auto;
+    position: absolute;
+    top: 25px;
+    left: 4.5vw;
+}
+
+.contenedor-slider2{
+    width: 60vw;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+    background-color: #fb943469;
+}
+
+.slider2{
+    width: 240vw;
+    height: 450px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin-left: -60vw;
+}
+
+.slider2-seccion{
+    width: 60vw;
+    height: 500px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.boton2-izq{
+    width: 50px;
+    height: 50px;
+    background-color: #FB9434;
+    position: absolute;
+    top: 350px;
+}
+
+.boton2-der{
+    width: 50px;
+    height: 50px;
+    background-color: #FB9434;
+    position: absolute;
+    right: 0px;
+    top: 350px;
+}
+
+/* tercera parte */
+
+.parte-3{
+    width: 100vw;
+    height: 800px;
+    position: relative;
+    top: 50px;
+    box-sizing: border-box;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.logo-dinamo-3{
+    width: 230px;
+    height: 85px;
+    position: absolute;
+    top: -30px;
+    right: 20vw;
+}
+
+.contenedor-categorias{
+    width: 90vw;
+    height: 650px;
+    background-color: rgb(122, 81, 11);
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffffff00;
+}
+
+.categoria-izq, .categoria-der{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.categoria{
+    width: 43vw;
+    height: 300px;
+    background: radial-gradient(circle,rgba(143, 143, 143, 1) 12%, rgba(80, 80, 80, 1) 100%);
+    border-radius: 20px;
+}
+
+.escala{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.escala:hover{
+    scale: 1.02;
+    transition: 0.2s;
+}
+
+.transparente{
+    width: 43vw;
+    height: 300px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.193);
+}
+
+.icono-categoria{
+    height: 300px;
+    width: 300px;
+}
+
+.titulo-categoria{
+    font-family: "kode";
+    color: white;
+}
+
+/* cuarta parte */
+
+.parte-4{
+    width: 100vw;
+    height: 800px;
+    box-sizing: border-box;
+    padding-top: 100px;
+}
+
+.contenido-parte-4{
+    width: 100vw;
+    height: 550px;
+    box-sizing: border-box;
+}
+
+.servicios{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-primario);
+}
+
+.servicio{
+    width: 381px;
+    min-width: 250px;
+    height: 250px;
+    border: 3px solid black;
+    box-sizing: border-box;
+    background-color: var(--color-primario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bi{
+    height: 50px;
+    width: 50px;
+    margin-top: 20px
+}
+
+.servicio-texto{
+    margin: 5px 60px;
+    text-align: center;
+}
+
+.slider-parte-4{
+    width: 100vw;
+    height: 400px;
+    background-color: rgb(62, 113, 14);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.slider-contenedor-4{
+    width: 70vw;
+    min-width: 500px;
+    height: 350px;
+    background-color: aquamarine;
+}
+
+.slide-4{
+    height: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -350px;
+}
+
+.slider4-contenido{
+    height: 1050px;
+    width: 800px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+}
+
+.botones-4{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-arriba, .btn-abajo{
+    width: 55px;
+    height: 55px;
+    background-color: brown;
+    border: 3px solid black; 
+}
+
+/* footer */
+
+.pie-de-pagina{
+    width: 100vw;
+    height: 200px;
+    background-color: var(--color-secundario);
+}
