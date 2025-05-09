@@ -181,6 +181,7 @@ botonIzq.addEventListener("click", function(){
 });
 
 
+
 /* quinta seccion*/
 
 const slider4 = document.querySelector("#slider4");
@@ -197,12 +198,29 @@ function arriba(){
     slider4.style.margintop = "-700px";
     slider4.style.transition = "0.5s";
     setTimeout(function(){
-        slider4.style.transition = "0s";
+        slider4.style.transition = "none";
         slider4.insertAdjacentElement("beforeend",primerSlider4);
         slider4.style.margintop = "-350px";
-    }, 500);
+    }, 0);
+}
+
+function abajo(){
+    let seccionSlider4 = document.querySelectorAll(".slider4-contenido");
+    let ultimaSeccion4 = seccionSlider4[seccionSlider4.length -1];
+    slider4.style.margintop = "0px";
+    slider4.style.transition = "0.5s";
+    setTimeout(function(){
+        slider4.style.transition = "none";
+        slider4.insertAdjacentElement("afterbegin",ultimaSeccion4);
+        slider4.style.margintop = "-350px";
+    }, 0);
 }
 
 botonUp.addEventListener("click", function(){
     arriba();
 });
+
+botonDown.addEventListener("click", function(){
+    abajo();
+});
+
