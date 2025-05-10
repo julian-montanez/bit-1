@@ -224,3 +224,8 @@ botonDown.addEventListener("click", function(){
     abajo();
 });
 
+const catCargador = document.querySelector("#cargador-link");
+
+// localStorage.setItem("catC", JSON.stringify(catCargador));
+
+console.log(localStorage.getItem("catC"));
