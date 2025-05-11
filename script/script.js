@@ -1,4 +1,4 @@
-/* primera seccion */
+/*::::::::::::::::::::::::::: primera seccion :::::::::::::::::::::::::::*/
 
 const slider = document.querySelector("#slider");
 let sliderSeccion = document.querySelectorAll(".slider-seccion");
@@ -36,7 +36,7 @@ boton3.addEventListener('click', function(){
     bot3();
 });
 
-/* segunda seccion*/
+/*::::::::::::::::::::::::::: segunda seccion :::::::::::::::::::::::::::*/
 
 const slider1 = document.querySelector("#slider-1");
 const miniSlider = document.querySelector("#mini-slider-1");
@@ -138,7 +138,33 @@ imagenM8.addEventListener('click', function(){
     eleccion8();
 });
 
-/* tercera seccion */
+/* ventana modal */
+
+const pagarVisa = document.querySelector("#pagar-visa");
+const modalInfo = document.querySelector("#pantalla-formulario");
+const enviarInfo = document.querySelector("#enviar-info");
+const pantAviso = document.querySelector("#pantalla-aviso")
+const cerrarModal = document.querySelector("#cerrar-modal")
+
+
+pagarVisa.addEventListener("click", ()=>{
+    modalInfo.showModal();
+});
+
+enviarInfo.addEventListener("click", ()=>{
+    modalInfo.close();
+    pantAviso.showModal();
+});
+
+cerrarModal.addEventListener("click", ()=>{
+    pantAviso.close();
+});
+
+
+
+
+
+/*::::::::::::::::::::::::::: tercera seccion :::::::::::::::::::::::::::*/
 
 const slider2 = document.querySelector("#slider2");
 let seccionslider2 = document.querySelectorAll(".slider2-seccion");
@@ -182,7 +208,7 @@ botonIzq.addEventListener("click", function(){
 
 
 
-/* quinta seccion*/
+/*::::::::::::::::::::::::::: quinta seccion :::::::::::::::::::::::::::*/
 
 const slider4 = document.querySelector("#slider4");
 let seccionSlider4 = document.querySelectorAll(".slider4-contenido");

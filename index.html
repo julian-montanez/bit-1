@@ -48,15 +48,54 @@
     </header>
     <main>
         <div class="parte-1">
+                <dialog class="pantalla-formulario" id="pantalla-formulario">
+                    <fieldset>
+                        <legend>informacion</legend>
+                            <div class="datos">
+                                <label for="nombre">nombre y apellido</label>
+                                <input class="input-datos" type="text" id="nombre" placeholder="nombre">
+                            </div>
+                            <div class="datos">
+                                <label for="email">email</label>
+                                <input class="input-datos" type="email" id="email" placeholder="ejemplo@email.com">
+                            </div>
+                            <div class="datos">
+                                <label for="fecha">direccion</label>
+                                <input class="input-datos" type="text" id="fecha">
+                            </div>
+                            <div class="datos">
+                                <label for="celular">celular</label>
+                                <input class="input-datos" type="tel" id="celular" placeholder="numero de celular">
+                            </div>
+                            <div>
+                                <button class="enviar" id="enviar-info">enviar</button>
+                            </div>
+                    </fieldset>
+                </dialog>
+                <dialog class="pantalla-formulario" id="pantalla-aviso">
+                    <p>hecho</p>
+                    <button id="cerrar-modal">cerrar</button>
+                </dialog>
+            <div class="paltalla-aviso">
+                <div class="modal-aviso"></div>
+            </div>
             <h2 class="titulo-parte1">Producto En Ofreta</h2>
             <div class="contenedor-parte1">
                 <div class="informacion-producto">
                     <h3 class="titulo-producto">CARGADOR GaN II 20W, CARGA RAPIDA, CON CABLE 6FT USB TIPO C - C, 2 PUERTOS USB C, 1 TIPO A.</h3>
                     <div class="separador-1"></div>
-                    <div class="contador"></div>
-                    <div class="agregar-carrito">agregar al carrito</div>
-                    <div class="pagar-visa">pagar con visa</div>
-                    <div class="ir-producto">ir al producto</div>
+                    <div class="precio-parte1">
+                        <p class="precio-antiguo"><s>$200.000</s></p>
+                        <p>$120.000</p>
+                        <div class="descuento">
+                            <p>ahorra el 40%</p>
+                        </div>
+                    </div>
+                    <button class="agregar-carrito" id="" type="button" class="btn btn-primary">agregar al carrito</button>
+                    <button class="pagar-visa" id="pagar-visa" type="button" class="btn btn-primary">pagar con visa</button>
+                    <a href="pages/pagina-producto.html">
+                        <div class="ir-producto">ir al producto</div>
+                    </a>
                 </div>
                 <div class="imagenes-producto">
                     <div class="contenedor-imagen-principal">
@@ -154,7 +193,6 @@
             </div>
         </div>
         <div class="parte-3">
-            <img loading="lazy" class="logo-dinamo-3" src="assets/logo-dinamo.png" alt="logo de dinamo">
             <div class="contenedor-categorias">
                 <div class="categoria-izq">
                     <div class="categoria">
@@ -171,7 +209,10 @@
                     </div>
                 </div>
                 <div class="categoria-der">
-                    <div class="transparente"></div>
+                    <div class="transparente">
+                        <img loading="lazy" class="logo-dinamo-3" src="assets/logo-dinamo.png" alt="logo de dinamo">
+                        <h2>encuentra lo que necesitas</h2>
+                    </div>
                     <div class="categoria">
                         <a href="#" class="escala">
                             <img class="icono-categoria" src="assets/iconos-parte-3/Captura de pantalla 2025-05-07 184435.png" alt="icono">
@@ -189,20 +230,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
                                 <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
                             </svg>
-                            <p class="servicio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio veniam rem nulla ipsum voluptas! Asperiores temporibus dolor, susci</p>
-                        </div>
-                        <div class="servicio">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
-                            </svg>
-                            <p class="servicio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio veniam rem nulla ipsum voluptas! Asperiores temporibus dolor, susci</p>
-                        </div>
-                        <div class="servicio">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
-                                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
-                            </svg>
-                            <p class="servicio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio veniam rem nulla ipsum voluptas! Asperiores temporibus dolor, susci</p>
+                            <p class="servicio-texto">Nuestros profecionales estan listos para solucionar tus problemas y dudas con una atencion al cliente las 24 hrs.</p>
                         </div>
                         <div class="servicio">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
@@ -210,16 +238,50 @@
                                 <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
                                 <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/>
                             </svg>
-                            <p class="servicio-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio veniam rem nulla ipsum voluptas! Asperiores temporibus dolor, susci</p>
+                            <p class="servicio-texto">guias de usuario al alcance de nuestros clientes</p>
+                        </div>
+                        <div class="servicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                                <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911z"/>
+                            </svg>
+                            <p class="servicio-texto">Nuestros productos cumplen con todas las certificaciones de calidad para que nuestros cliente obtenga la mejor experiencia.</p>
+                        </div>
+                        <div class="servicio">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                                <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/>
+                            </svg>
+                            <p class="servicio-texto">Envio internacional gratis, con compras superiores a $200.000 pesos colombianos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="slider-parte-4" id="nosotros">
                     <div class="slider-contenedor-4">
                         <div class="slide-4" id="slider4">
-                            <div class="slider4-contenido">a</div>
-                            <div class="slider4-contenido">b</div>
-                            <div class="slider4-contenido">c</div>
+                            <div class="slider4-contenido">
+                                <img class="slider4-imagen" src="assets/imagenes slider 4/imagen slider 4-1.jpeg" alt="imagen slider 4">
+                                <div class="slider4-texto">
+                                    <h3>sobre Dinamo</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="slider4-contenido">
+                                <img class="slider4-imagen" src="assets/imagenes slider 4/imagen slider 4-2.jpg" alt="imagen slider 4">
+                                <div class="slider4-texto">
+                                    <h3>nuestras instalaciones</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="slider4-contenido">
+                                <div class="slider4-texto1">
+                                    <h4>se el primero en saber lo nuevo de la marca.</h4>
+                                    <p>ingresa tu corre, te enviamos noticias sobre lo nuevo que hay en la marca.</p>
+                                </div>
+                                <div class="slider4-input">
+                                    <input type="email">
+                                    <input id="enviar-slider4" type="submit">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="botones-4">

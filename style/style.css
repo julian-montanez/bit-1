@@ -84,6 +84,7 @@ body{
 .slider-seccion{
     width: 300vw;
     height: 750px;
+    min-width: 576px;
     background-color: blueviolet;
     box-sizing: border-box;
 }
@@ -171,36 +172,53 @@ body{
     margin: 30px 10px;
 }
 
-.contador{
-    width: 200px;
+.precio-parte1{
     height: 55px;
-    background-color: var(--color-primario);
     border-radius: 20px;
     margin-top: 20px;
-    margin-left: 4vw
+    margin-left: 4vw;
+    text-align: center;
+    padding: 1px;
+    display: flex;
+    flex-direction: row;
 }
 
-.agregar-carrito{
+.precio-parte1 > p{
+    margin-top: 5px;
+    font-size: 25px;
+    color: red;
+}
+
+.precio-parte1 > .precio-antiguo{
+    color: rgb(112, 112, 112);
+    scale: 0.7;
+    margin-top: 10px;
+}
+
+.descuento{
+    width: 120px;
+    height: 25px;
+    color: white;
+    background-color: red;
+    margin-left: 10px;
+    margin-top: 12px;
+    border-radius: 5px;
+}
+
+.agregar-carrito, .pagar-visa{
     width: 30vw;
     min-width: 430px;
     height: 55px;
     background-color: gray;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-top: 20px;
     margin-left: 4vw;
     text-align: center;
 }
 
 .pagar-visa{
-    width: 30vw;
-    min-width: 430px;
-    height: 55px;
-    background-color: gray;
-    border-radius: 30px;
-    margin-top: 20px;
-    margin-left: 4vw;
+    background-color: rgb(35, 97, 211);
     margin-bottom: 50px;
-    text-align: center;
 }
 
 .ir-producto{
@@ -271,6 +289,63 @@ body{
     transition: 0.5s;
 }
 
+.pantalla-formulario{
+    width: 55vw;
+    min-width: 500px;
+    height: 400px;
+    background-color: #ffffff;
+}
+
+.pantalla-formulario::backdrop{
+    background-color: #282828d6;
+}
+
+fieldset{
+    margin: auto;
+    height: 0px;
+    width: 40vw;
+    border-radius: 20px;
+}
+
+legend{
+    padding: 0 30px;
+    margin-left: 6vw;
+    color: var(--color-primario);
+    font-size: 20px;
+}
+
+.datos{
+    margin-bottom: 12px;
+}
+
+label{
+    margin-left: 15px;
+    color: var(--color-primario);
+    text-transform: capitalize;
+}
+
+.input-datos{
+    width: 40vw;
+    border: none;
+    font-size: 18px;
+    margin-top: 10px;
+    background-color: rgba(203, 72, 43, 0.147);
+    border-left: 3px solid var(--color-primario);
+    border-radius: 4px;
+    height: 25px;
+}
+
+.input-datos:focus{
+    border-left: 3px solid var(--color-primario);
+    outline: 1px solid var(--color-primario);
+}
+
+.enviar{
+    margin-left: 17vw;
+    width: 60px;
+    height: 30px;
+    text-transform: capitalize;
+}
 
 /* segunda parte */
 
@@ -359,7 +434,8 @@ body{
 
 .ventana-2{
     height: 0px;
-    width: 461px;
+    width: 30vw;
+    min-width: 344px;
     position: absolute;
     top: -70px;
     left: -2px;
@@ -371,7 +447,8 @@ body{
 
 .objeto-2:hover .ventana-2{
     height: 100px;
-    width: 461px;
+    width: 30vw;
+    min-width: 344px;
     outline: 3px solid var(--color-primario);
     border-radius: 3px;
     transition: 1s;
@@ -407,7 +484,6 @@ body{
 
 .parte-3{
     width: 100vw;
-    height: 800px;
     position: relative;
     top: 50px;
     box-sizing: border-box;
@@ -416,36 +492,61 @@ body{
     align-items: center;
 }
 
+.transparente{
+    width: 43vw;
+    min-width: 400px;
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo-dinamo-3{
     width: 230px;
     height: 85px;
     position: absolute;
-    top: -30px;
-    right: 20vw;
+    top: -80px;
+    right: 12vw;
+}
+
+.transparente > h2 {
+    color: #FB9434;
+    font-size: 70px;
+    text-align: center;
+    font-family: "alegreya";
+    font-weight: bolder;
 }
 
 .contenedor-categorias{
     width: 90vw;
-    height: 650px;
     background-color: rgb(122, 81, 11);
     margin: auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap-reverse;
     justify-content: space-between;
     background-color: #ffffff00;
+    justify-content: center;
 }
 
 .categoria-izq, .categoria-der{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 20px;
 }
+
+
 
 .categoria{
     width: 43vw;
-    height: 300px;
+    min-width: 400px;
     background: radial-gradient(circle,rgba(143, 143, 143, 1) 12%, rgba(80, 80, 80, 1) 100%);
     border-radius: 20px;
+    margin-top: 50px;
+    display: flex;
 }
 
 .escala{
@@ -476,6 +577,7 @@ body{
 .titulo-categoria{
     font-family: "kode";
     color: white;
+    text-wrap: wrap;
 }
 
 /* cuarta parte */
@@ -507,8 +609,7 @@ body{
 .servicio{
     width: 381px;
     min-width: 240px;
-    height: 250px;
-    border: 3px solid black;
+    height: 200px;
     box-sizing: border-box;
     background-color: var(--color-primario);
     display: flex;
@@ -529,8 +630,6 @@ body{
 
 .slider-parte-4{
     width: 100vw;
-    height: 400px;
-    background-color: rgb(62, 113, 14);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -539,11 +638,13 @@ body{
 }
 
 .slider-contenedor-4{
-    width: 70vw;
+    width: 60vw;
     min-width: 500px;
     height: 350px;
-    background-color: aquamarine;
+    margin-top: 20px;
     overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid black;
 }
 
 .slide-4{
@@ -556,7 +657,8 @@ body{
 
 .slider4-contenido{
     height: 1050px;
-    width: 800px;
+    width: 60vw;
+    min-width: 500px;
     box-sizing: border-box;
     background-color: antiquewhite;
     display: flex;
@@ -566,6 +668,28 @@ body{
 .botones-4{
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
+}
+
+.slider4-imagen{
+    width: 60%;
+    min-width: 300px;
+    height: 100%;
+}
+
+.slider4-texto{
+    width: 40%;
+    min-width: 200px;
+    height: 100%;
+    background-color: #dddddd;
+}
+
+.slider4-texto1{
+
+}
+
+.slider4-input{
+
 }
 
 .btn-arriba, .btn-abajo{
@@ -593,7 +717,6 @@ body{
 
 .contenedor-imagen-representativa{
     height: 250px;
-    
 }
 
 .imagen-representativa{
@@ -602,6 +725,7 @@ body{
 
 .imagen-desaparece1, .imagen-desaparece2, .imagen-desaparece3, .imagen-desaparece4{
     width: 100vw;
+    min-width: 547px;
     height: 250px;
     position: absolute;
 }
@@ -623,30 +747,33 @@ body{
     background-color: chartreuse;
 }
 
+/* seccion de categoria */
+
 .productos-pag-seleccion{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 1;
 }
-
-/* seccion de categoria */
 
 .elegir-categoria{
     width: 20vw;
-    height: 747px;
+    height: 50px;
+    min-width: 300px;
     box-sizing: border-box;
-    border: 4px solid black; 
-    overflow: hidden;
     position: sticky;
     top: 80px;
 }
 
 .contenedor-menu-cat{
     position: relative;
+        background-color: white;
 }
 
 .menu-cartegorias-productos-A, .menu-cartegorias-productos-B{
     height: 50px;
     width: 20vw;
+    min-width: 300px;
     background-color: #00000028;
     padding-left: 20px;
     padding-top: 2px;
@@ -694,13 +821,13 @@ body{
     /* seccion de producto */
 
 .producto-elegir{
-    width: 80vw;
+    width: 79vw;
+    min-width: 500px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    border: 4px solid black; 
 }
 
 .producto-miniatura{
@@ -755,7 +882,6 @@ body{
 .contenedor-producto{
     width: 100vw;
     min-width: 576px;
-    height: 600px;
     background-color: #34fbe7;
     display: flex;
     flex-direction: row;
@@ -763,25 +889,47 @@ body{
 }
 
 .contenedor-imagenes{
-    width: 40vw;
+    width: 50vw;
     min-width: 576px;
-    height: 500px;
+    height: 700px;
     border: 2px solid black;
 }
 
 .contenedor-informacion{
-    width: 60vw;
+    width: 50vw;
     min-width: 576px;
-    height: 500px;
+    height: 700px;
     border: 2px solid black;
+}
+
+
+
+.titulo-producto-pag{
+    width: 40vw;
+    min-width: 576px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.precio-producto{
+    margin-left: 70px;
+}
+
+.separador-producto{
+    width: 40vw;
+    margin: 30px 50px;
+    border: 1px solid black;
+}
+
+.descripcion-pag{
+    margin-left: 100px;
 }
 
 
 
 
 
-
-/*::::::::::::::::::::: pagina producto :::::::::::::::::::::*/
+/*::::::::::::::::::::: pagina cuenta :::::::::::::::::::::*/
 
 .contenedor-formulario{
     width: 100vw;
