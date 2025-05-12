@@ -36,6 +36,7 @@ body{
     color: aliceblue;
     z-index: 2;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .logo-dinamo{
