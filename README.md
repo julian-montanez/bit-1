@@ -2,7 +2,7 @@
 
 ## proyecto de bit
 
-## nombre: Dinamo
+## nombre de la pagina: Dinamo
 ---
 
 ### descripcion
@@ -10,16 +10,16 @@
 > pagina de venta de productos electronicos.
 ---
 
-### vista preia de la pagina
+### vista previa de la pagina
 
-![vista previa Dinamo](land-page(VP).png)
+![vista previa Dinamo](assets/land-page(VP).png)
 ---
 
 ### tecnologias utilizadas
 
-*html
-*css
-*javascript
+* html
+* css
+* javascript
 ---
 
 > autor: julian montañez
