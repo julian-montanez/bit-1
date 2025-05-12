@@ -1,26 +1,30 @@
-/*::::::::::::::::::::::::::: primera seccion :::::::::::::::::::::::::::*/
+/* ventana modal */
 
-const slider = document.querySelector("#slider");
-const sliderSeccion = document.querySelectorAll(".slider-seccion");
-const sliderUltimaSec = sliderSeccion[sliderSeccion.length -1];
+const pagarVisa = document.querySelector("#pagar-visa");
+const modalInfo = document.querySelector("#pantalla-formulario");
+const enviarInfo = document.querySelector("#enviar-info");
+const cancelInfo = document.querySelector("#cancelar-info")
+const pantAviso = document.querySelector("#pantalla-aviso")
+const cerrarModal = document.querySelector("#cerrar-modal")
 
-slider.insertAdjacentElement("afterbegin", sliderUltimaSec);
+pagarVisa.addEventListener("click", ()=>{
+    modalInfo.showModal();
+});
 
-function mover(){
-    let primerslider = document.querySelectorAll(".slider-seccion")[0];
-    slider.style.marginLeft = "-200vw";
-    slider.style.transition = "0.5s";
+enviarInfo.addEventListener("click", ()=>{
+    modalInfo.close();
     setTimeout(function(){
-        slider.style.transition = "none";
-        slider.insertAdjacentElement("beforeend",primerslider);
-        slider.style.marginLeft = "-100vw";
+        pantAviso.showModal();
     }, 500);
-}
+});
 
-setInterval(() => {
-    mover();
-}, 10000);
+cancelInfo.addEventListener("click", ()=>{
+    modalInfo.close();
+});
 
+cerrarModal.addEventListener("click", ()=>{
+    pantAviso.close();
+});
 
 /*::::::::::::::::::::::::::: segunda seccion :::::::::::::::::::::::::::*/
 
@@ -124,34 +128,6 @@ imagenM8.addEventListener('click', function(){
     eleccion8();
 });
 
-/* ventana modal */
-
-const pagarVisa = document.querySelector("#pagar-visa");
-const modalInfo = document.querySelector("#pantalla-formulario");
-const enviarInfo = document.querySelector("#enviar-info");
-const cancelInfo = document.querySelector("#cancelar-info")
-const pantAviso = document.querySelector("#pantalla-aviso")
-const cerrarModal = document.querySelector("#cerrar-modal")
-
-pagarVisa.addEventListener("click", ()=>{
-    modalInfo.showModal();
-});
-
-enviarInfo.addEventListener("click", ()=>{
-    modalInfo.close();
-    setTimeout(function(){
-        pantAviso.showModal();
-    }, 500);
-});
-
-cancelInfo.addEventListener("click", ()=>{
-    modalInfo.close();
-});
-
-cerrarModal.addEventListener("click", ()=>{
-    pantAviso.close();
-});
-
 /* carrito de compra */
 
 const botonCarrito = document.querySelector("#agregar-carrito");
@@ -174,48 +150,6 @@ eliminarCompra.addEventListener("click", ()=>{
     eliminar();
 });
 
-
-/*::::::::::::::::::::::::::: tercera seccion :::::::::::::::::::::::::::*/
-
-const slider2 = document.querySelector("#slider2");
-let seccionslider2 = document.querySelectorAll(".slider2-seccion");
-let ultimaSeccion2 = seccionslider2[seccionslider2.length -1];
-
-const botonIzq = document.querySelector("#boton2-izq");
-const botonDer = document.querySelector("#boton2-der");
-
-slider2.insertAdjacentElement("afterbegin", ultimaSeccion2);
-
-function derecha(){
-    let primerslider2 = document.querySelectorAll(".slider2-seccion")[0];
-    slider2.style.marginLeft = "-120vw";
-    slider2.style.transition = "0.5s";
-    setTimeout(function(){
-        slider2.style.transition = "none";
-        slider2.insertAdjacentElement("beforeend",primerslider2);
-        slider2.style.marginLeft = "-60vw";
-    }, 500);
-}
-
-function izquierda(){
-    let seccionslider2 = document.querySelectorAll(".slider2-seccion");
-    let ultimaSeccion2 = seccionslider2[seccionslider2.length -1];
-    slider2.style.marginLeft = "0";
-    slider2.style.transition = "0.5s";
-    setTimeout(function(){
-        slider2.style.transition = "none";
-        slider2.insertAdjacentElement("afterbegin",ultimaSeccion2);
-        slider2.style.marginLeft = "-60vw";
-    }, 500);
-}
-
-botonDer.addEventListener("click", function(){
-    derecha();
-});
-
-botonIzq.addEventListener("click", function(){
-    izquierda();
-});
 
 
 
@@ -260,9 +194,3 @@ botonUp.addEventListener("click", function(){
 botonDown.addEventListener("click", function(){
     abajo();
 });
-
-const catCargador = document.querySelector("#cargador-link");
-
-// localStorage.setItem("catC", JSON.stringify(catCargador));
-
-console.log(localStorage.getItem("catC"));

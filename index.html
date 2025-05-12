@@ -18,30 +18,29 @@
         </div>
         <div>
             <ul class="opciones-central">
-                <li><a href="#">inicio</a></li>
-                <li><a href="pages/productos.html">productos</a></li>
-                <li><a href="#nosotros">nosotros</a></li>
+                <li><a class="opcion-nav" href="#">inicio</a></li>
+                <li><a class="opcion-nav" href="pages/productos.html">productos</a></li>
+                <li><a class="opcion-nav" href="#nosotros">nosotros</a></li>
             </ul>
         </div>
-        <div>
-            <ul class="opciones-der">
-                <li><a href="pages/pagina-cuenta.html">cuenta</a></li>
-                <li><a href="#">carrito</a></li>
-            </ul>
+        <div class="carrito-contenedor">
+            <div class="contador-indicador" id="contador-indicador">
+                <p>1</p>
+            </div>
+            <div class="opcion-der">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart4 carrito" id="carrito" viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                </svg>
+            </div>
         </div>
     </nav>
     <header>
         <div>
             <div class="slider-contenedor">
                 <div class="slider" id="slider">
-                    <div class="slider-seccion seccion1"></div>
-                    <div class="slider-seccion seccion2"></div>
-                    <div class="slider-seccion seccion3"></div>
-                    <div class="botones">
-                        <div class="boton" id="boton1"></div>
-                        <div class="boton" id="boton2"></div>
-                        <div class="boton" id="boton3"></div>
-                    </div>
+                    <img src="assets/fondos slider 1/slider-1-primera.jpg" class="slider-seccion seccion1">
+                    <img src="assets/fondos slider 1/slider-2-primera.png" class="slider-seccion seccion2">
+                    <img src="assets/fondos slider 1/slider-3-primera.png" class="slider-seccion seccion3">
                 </div>
             </div>
         </div>
@@ -50,14 +49,15 @@
         <div class="parte-1">
                 <dialog class="pantalla-formulario" id="pantalla-formulario">
                     <fieldset>
-                        <legend>informacion</legend>
+                        <legend>Ingrese Informacion Para Proceder Con El Pago</legend>
+                        <form>
                             <div class="datos">
                                 <label for="nombre">nombre y apellido</label>
-                                <input class="input-datos" type="text" id="nombre" placeholder="nombre">
+                                <input class="input-datos" type="text" id="nombre" required placeholder="nombre y apellido">
                             </div>
                             <div class="datos">
                                 <label for="email">email</label>
-                                <input class="input-datos" type="email" id="email" placeholder="ejemplo@email.com">
+                                <input class="input-datos" type="email" id="email" required placeholder="ejemplo@email.com">
                             </div>
                             <div class="datos">
                                 <label for="fecha">direccion</label>
@@ -67,14 +67,18 @@
                                 <label for="celular">celular</label>
                                 <input class="input-datos" type="tel" id="celular" placeholder="numero de celular">
                             </div>
-                            <div>
-                                <button class="enviar" id="enviar-info">enviar</button>
-                            </div>
+                        </form>
+                        <div>
+                            <button class="enviar btn btn-outline-success" id="enviar-info" type="submit">enviar</button>
+                            <button class="cancelar btn btn-outline-danger" id="cancelar-info" type="button">cancelar</button>
+                        </div>
                     </fieldset>
                 </dialog>
                 <dialog class="pantalla-formulario" id="pantalla-aviso">
-                    <p>hecho</p>
-                    <button id="cerrar-modal">cerrar</button>
+                    <p class="texto-informativo">
+                        <b>INFORMACION RECIBIDA</b> en breve te enviaremos la informacion de pago a tu correo.
+                    </p>
+                    <button class="btn btn-outline-secondary" id="cerrar-modal" type="button">cerrar</button>
                 </dialog>
             <div class="paltalla-aviso">
                 <div class="modal-aviso"></div>
@@ -91,9 +95,9 @@
                             <p>ahorra el 40%</p>
                         </div>
                     </div>
-                    <button class="agregar-carrito" id="" type="button" class="btn btn-primary">agregar al carrito</button>
-                    <button class="pagar-visa" id="pagar-visa" type="button" class="btn btn-primary">pagar con visa</button>
-                    <a href="pages/pagina-producto.html">
+                    <button class="agregar-carrito" id="agregar-carrito" type="button" class="btn btn-primary">agregar al carrito</button>
+                    <button class="pagar-visa" id="pagar-visa" type="button" class="btn btn-primary">pagar con <img src="assets/Visa-Logo.png" class="logo-visa" alt="logo-visa"></button>
+                    <a href="pages/html paginas productos/pagina-producto.html">
                         <div class="ir-producto">ir al producto</div>
                     </a>
                 </div>
@@ -137,8 +141,8 @@
                                         <img class="img-obj-2" src="assets/productos con fondo transparente/cargador_fondo_transparente.png" alt="producto">
                                     </a>
                                     <div class="ventana-2">
-                                        <h4>titulo del producto</h4>
-                                        <p>precio</p>
+                                        <h4>CARGADOR GaN II 20W</h4>
+                                        <p>$120.000</p>
                                     </div>
                                 </div>
                                 <div class="sombra"></div>
@@ -151,8 +155,8 @@
                                         <img class="img-obj-2" src="assets/productos con fondo transparente/powerbank-fondo-transparente.png" alt="producto">
                                     </a>
                                     <div class="ventana-2">
-                                        <h4>titulo del producto</h4>
-                                        <p>precio</p>
+                                        <h4>INIU Banco de energía</h4>
+                                        <p>$200.000</p>
                                     </div>
                                 </div>
                                 <div class="sombra"></div>
@@ -165,8 +169,8 @@
                                         <img class="img-obj-2" src="assets/productos con fondo transparente/audifonos_fondo_transparente.png" alt="producto">
                                     </a>
                                     <div class="ventana-2">
-                                        <h4>titulo del producto</h4>
-                                        <p>precio</p>
+                                        <h4>Auriculares inalámbricos con gancho</h4>
+                                        <p>$120.000</p>
                                     </div>
                                 </div>
                                 <div class="sombra"></div>
@@ -179,8 +183,8 @@
                                         <img class="img-obj-2" src="assets/productos con fondo transparente/audifonosD_fondo_transparente.png" alt="producto">
                                     </a>
                                     <div class="ventana-2">
-                                        <h4>titulo del producto</h4>
-                                        <p>precio</p>
+                                        <h4>Soundcore Auriculares híbridos</h4>
+                                        <p>$280.000</p>
                                     </div>
                                 </div>
                                 <div class="sombra"></div>
@@ -188,8 +192,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="boton2-der" id="boton2-der"></div>
-                <div class="boton2-izq" id="boton2-izq"></div>
+                <div class="boton2-der" id="boton2-der">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+                    </svg>
+                </div>
+                <div class="boton2-izq" id="boton2-izq">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </div>
             </div>
         </div>
         <div class="parte-3">
@@ -262,38 +274,67 @@
                                 <img class="slider4-imagen" src="assets/imagenes slider 4/imagen slider 4-1.jpeg" alt="imagen slider 4">
                                 <div class="slider4-texto">
                                     <h3>sobre Dinamo</h3>
-                                    <p></p>
+                                    <p>Dinamo es una empresa especializada en la venta de dispositivos electrónicos, ofreciendo cargadores, audífonos y bancos de energía de alta calidad, diseñados para satisfacer las necesidades tecnológicas de nuestros clientes.</p>
                                 </div>
                             </div>
                             <div class="slider4-contenido">
                                 <img class="slider4-imagen" src="assets/imagenes slider 4/imagen slider 4-2.jpg" alt="imagen slider 4">
                                 <div class="slider4-texto">
                                     <h3>nuestras instalaciones</h3>
-                                    <p></p>
+                                    <p>La empresa cuenta con instalaciones modernas y automatizadas, equipadas con tecnología avanzada para la fabricación de nuestros productos garantizando una gran calidad y eficiencia en cada uno.</p>
                                 </div>
                             </div>
-                            <div class="slider4-contenido">
-                                <div class="slider4-texto1">
-                                    <h4>se el primero en saber lo nuevo de la marca.</h4>
-                                    <p>ingresa tu corre, te enviamos noticias sobre lo nuevo que hay en la marca.</p>
-                                </div>
-                                <div class="slider4-input">
-                                    <input type="email">
-                                    <input id="enviar-slider4" type="submit">
+                            <div class="slider4-contenido slide-4-sec3">
+                                <div class="slide-4-marco">
+                                    <img src="assets/logo-dinamo.png" class="logo-dinamo-s4" alt="logo-dinamo">
+                                    <div class="slider4-texto1">
+                                        <h4>se el primero en saber lo nuevo de la marca.</h4>
+                                        <p>ingresa tu corre, te enviaremos noticias sobre lo nuevo que hay en Dinamo.</p>
+                                    </div>
+                                    <form>
+                                        <div class="slider4-input">
+                                            <input type="email" class="email-slider4" required placeholder="ejemplo@correo.com">
+                                            <input class="btn btn-primary enviar-slider4" type="submit" value="Enviar">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="botones-4">
-                        <div class="btn-arriba" id="boton-arriba"></div>
-                        <div class="btn-abajo" id="boton-abajo"></div>
+                        <div class="btn-abajo" id="boton-arriba">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4"/>
+                            </svg>
+                        </div>
+                        <div class="btn-arriba" id="boton-abajo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 12a.5.5 0 0 0 .5-.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 .5.5"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="pie-de-pagina"></div>
+    <footer class="pie-de-pagina">
+        <img class="logo-footer" src="assets/logo-dinamo.png" alt="logo">
+        <div class="contactame">
+            <h2 class="contactame-titulo">Contactanos</h2>
+            <ul class="contactame-opciones">
+                <li><B>CELULAR:</B> <a class="link-tel" href="tel:+31431434456">+57 ##########</a></li>
+                <li><B>CORREO:</B> <a class="link-correo" href="mailto:juanmonrrou4@gmail.com">empresa@correo.com</a></li>
+                <li><B>DIRECCION:</B> <a class="link-correo">cra*** #2*B**</a></li>
+            </ul>
+        </div>
+        <div class="separador"></div>
+        <div>
+            <h2 class="titulo-redes">Redes sociales</h2>
+            <div class="git-link">
+                <a href="https://es-la.facebook.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="assets/logo redes/image.png" alt="imagen Facebook"></a>
+                <a href="https://www.instagram.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="assets/logo redes/image (1).png" alt="imagen Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
