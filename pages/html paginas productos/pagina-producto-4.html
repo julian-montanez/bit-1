@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinamo</title>
-    <link rel="icon" href="../assets/icono-dinamo.png">
+    <link rel="icon" href="../../assets/icono-dinamo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
 </head>
 <body>
     <nav class="navegador">
         <div>
-            <a href="../index.html">
+            <a href="../../index.html">
                 <img class="logo-dinamo" src="../../assets/logo-dinamo.png" alt="logo de dinamo">
             </a>
         </div>
         <div>
             <ul class="opciones-central">
-                <li><a class="opcion-nav" href="../index.html">inicio</a></li>
-                <li><a class="opcion-nav" href="../pages/productos.html">productos</a></li>
+                <li><a class="opcion-nav" href="../../index.html">inicio</a></li>
+                <li><a class="opcion-nav" href="../../pages/productos.html">productos</a></li>
                 <li><a class="opcion-nav" href="#nosotros">nosotros</a></li>
             </ul>
         </div>
@@ -33,122 +33,80 @@
             </div>
         </div>
     </nav>
-    <main>
-        <div>
-            <div class="contenedor-imagen-representativa">
-                <div class="imagen-representativa">
-                    <img src="../assets/fondos-categorias/fondo-categoria-1.png" class="imagen-desaparece1" id="imagen-desaparece1">
-                    <img src="../assets/fondos-categorias/fondo-categoria-2.png" class="imagen-desaparece2" id="imagen-desaparece2">
-                    <img src="../assets/fondos-categorias/fondo-categoria-3.png" class="imagen-desaparece3" id="imagen-desaparece3">
-                    <img src="../assets/fondos-categorias/fondo-categoria-4.png" class="imagen-desaparece4" id="imagen-desaparece4">
+    <main class="main-producto">
+        <dialog class="pantalla-formulario" id="pantalla-formulario">
+            <fieldset>
+                <legend>Ingrese Informacion Para Proceder Con El Pago</legend>
+                <form>
+                    <div class="datos">
+                        <label for="nombre">nombre y apellido</label>
+                        <input class="input-datos" type="text" id="nombre" required placeholder="nombre y apellido">
+                    </div>
+                    <div class="datos">
+                        <label for="email">email</label>
+                        <input class="input-datos" type="email" id="email" required placeholder="ejemplo@email.com">
+                    </div>
+                    <div class="datos">
+                        <label for="fecha">direccion</label>
+                        <input class="input-datos" type="text" id="fecha">
+                    </div>
+                    <div class="datos">
+                        <label for="celular">celular</label>
+                        <input class="input-datos" type="tel" id="celular" placeholder="numero de celular">
+                    </div>
+                </form>
+                <div>
+                    <button class="enviar btn btn-outline-success" id="enviar-info" type="submit">enviar</button>
+                    <button class="cancelar btn btn-outline-danger" id="cancelar-info" type="button">cancelar</button>
+                </div>
+            </fieldset>
+        </dialog>
+        <dialog class="pantalla-formulario" id="pantalla-aviso">
+            <p class="texto-informativo">
+                <b>INFORMACION RECIBIDA</b> en breve te enviaremos la informacion de pago a tu correo.
+            </p>
+            <button class="btn btn-outline-secondary" id="cerrar-modal" type="button">cerrar</button>
+        </dialog>
+        <div class="contenedor-producto">
+            <div class="contenedor-imagenes">
+                <div class="imagenes-producto">
+                    <div class="contenedor-imagen-principal">
+                        <div class="imagen-principal" id="slider-1">
+                            <img loading="lazy" class="mostrar-imagen" src="../../assets/imagenes audifionos/audifonos1/71cmAChhQKL._AC_SX425_.jpg" alt="cargador imagen 1">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/71md18f9XsL._AC_SX425_.jpg" alt="cargador imagen 2">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/71P25YFRZiL._AC_SL1500_.jpg" alt="cargador imagen 3">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/71Tu3gEFZJL._AC_SX425_.jpg" alt="cargador imagen 4">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/71ZSCVChjAL._AC_SL1500_.jpg" alt="cargador imagen 5">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/8134AgrT88L._AC_SX425_.jpg" alt="cargador imagen 6">
+                            <img loading="lazy" class="mostrar-imagen imagen-secundaria" src="../../assets/imagenes audifionos/audifonos1/81Olfnu8RvL._AC_SX425_.jpg" alt="cargador imagen 7">
+                        </div>
+                    </div>
+                    <div class="contenedor-slider-imagenes-p1"> 
+                        <div class="slider-imagenes-p1" id="mini-slider-1">
+                            <img loading="lazy" class="vista-previa" id="eleccion-1" src="../../assets/imagenes audifionos/audifonos1/71cmAChhQKL._AC_SX425_.jpg" alt="cargador imagen 1">
+                            <img loading="lazy" class="vista-previa" id="eleccion-2" src="../../assets/imagenes audifionos/audifonos1/71md18f9XsL._AC_SX425_.jpg" alt="cargador imagen 2">
+                            <img loading="lazy" class="vista-previa" id="eleccion-3" src="../../assets/imagenes audifionos/audifonos1/71P25YFRZiL._AC_SL1500_.jpg" alt="cargador imagen 3">
+                            <img loading="lazy" class="vista-previa" id="eleccion-4" src="../../assets/imagenes audifionos/audifonos1/71Tu3gEFZJL._AC_SX425_.jpg" alt="cargador imagen 4">
+                            <img loading="lazy" class="vista-previa" id="eleccion-5" src="../../assets/imagenes audifionos/audifonos1/71ZSCVChjAL._AC_SL1500_.jpg" alt="cargador imagen 5">
+                            <img loading="lazy" class="vista-previa" id="eleccion-6" src="../../assets/imagenes audifionos/audifonos1/8134AgrT88L._AC_SX425_.jpg" alt="cargador imagen 6">
+                            <img loading="lazy" class="vista-previa" id="eleccion-7" src="../../assets/imagenes audifionos/audifonos1/81Olfnu8RvL._AC_SX425_.jpg" alt="cargador imagen 7">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="productos-pag-seleccion">
-                <div class="elegir-categoria">
-                    <div class="contenedor-menu-cat">
-                        <div>
-                            <div class="menu-cartegorias-productos-A" id="menu-cat-A">categorias</div>
-                            <div class="menu-cartegorias-productos-B" id="menu-cat-B">categorias</div>
-                        </div>
-                        <ul class="carteorias-productos" id="cat-productos">
-                            <li class="cat"><a class="cat-li" id="cat-todos" href="#">todo</a></li>
-                            <li class="cat"><a class="cat-li" id="cat-carga" href="#">cargadores</a></li>
-                            <li class="cat"><a class="cat-li" id="cat-BE" href="#">bancos de energia</a></li>
-                            <li class="cat"><a class="cat-li" id="cat-audi" href="#">audifonos</a></li>
-                        </ul>
-                    </div>
+            <div class="contenedor-informacion">
+                <h2 class="titulo-producto-pag">Auriculares inalámbricos con gancho para la oreja, Auriculares deportivos estéreo HiFI impermeables con micrófono, auriculares TWS.</h2>
+                <div class="precio-parte1">
+                    <p class="precio-nuevo">$120.000</p>
                 </div>
-                <div class="producto-elegir">
-                    <div class="producto-miniatura producto-cargadores">
-                        <a href="../pages/html paginas productos/pagina-producto.html" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/cargador recomendado/cargador solo.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo">CARGADOR GaN II 20W</p>
-                            <p class="miniatura-precio">$120.000</p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-banks">
-                        <a href="../pages/html paginas productos/pagina-producto-1.html" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes powerbanks/powerbank1/516tnauVb+L._AC_SX522_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo">INIU Banco de energía</p>
-                            <p class="miniatura-precio">$200.000</p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-banks agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes powerbanks/powerbank3/51j3+v5AuNL._AC_SX522_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>Belkin Boostcharge Plus 10K Portable Charger Power Bank</s></p>
-                            <p class="miniatura-precio"><s>$250.000</s></p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-cargadores agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes cargadores/imagenes cargador 1 jpg/imagen principal.jpg_-Photoroom.-fotor-enhance-20250511222559.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>Cargador USB C PD de 4 puertos, 120W</s></p>
-                            <p class="miniatura-precio"><s>$180.000</s></p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-audifonos">
-                        <a href="../pages/html paginas productos/pagina-producto-4.html" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes audifionos/audifonos1/71cmAChhQKL._AC_SX425_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo">Auriculares inalámbricos con gancho</p>
-                            <p class="miniatura-precio">$120.000</p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-audifonos agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes audifionos/audifonos2/71MzTsi7UjL._AC_SX679_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>OneOdio Auriculares de tipo diadema</s></p>
-                            <p class="miniatura-precio"><s>$220.000</s></p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-audifonos agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes audifionos/audifonos3/616TnjzbmeL._AC_SX425_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>Demicea Auriculares Inalámbricos De Conducción Ósea</s></p>
-                            <p class="miniatura-precio"><s>$300.000</s></p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-audifonos">
-                        <a href="../pages/html paginas productos/pagina-producto-7.html" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes audifionos/audifonos4/51FfiLFD2oL._AC_SX679_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo">Soundcore Auriculares híbridos con cancelación activa de ruido</p>
-                            <p class="miniatura-precio">$280.000</p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-banks agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes powerbanks/powerbank4/51o27YG-iTL._AC_SX679_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>Batería Externa 27000mAh Power Bank - Bilivein</s></p>
-                            <p class="miniatura-precio"><s>$230.000</s></p>
-                        </a>
-                    </div>
-                    <div class="producto-miniatura producto-cargadores agotado">
-                        <a href="" class="link-producto">
-                            <div class="contenedor-miniatura-imagen">
-                                <img src="../assets/imagenes cargadores/cargador 4/517cIvHw5eL._AC_SX679_.jpg" class="miniatura-imagen">
-                            </div>
-                            <p class="miniatura-titulo"><s>Cargador PD rápido de 4 puertos de 100 W, cargador portátil tipo C</s></p>
-                            <p class="miniatura-precio"><s>$90.000</s></p>
-                        </a>
-                    </div>
+                <hr class="separador-producto">
+                <button class="agregar-carrito" id="agregar-carrito" type="button" class="btn btn-primary">agregar al carrito</button>
+                <button class="pagar-visa" id="pagar-visa" type="button" class="btn btn-primary">pagar con <img src="../../assets/Visa-Logo.png" class="logo-visa" alt="logo-visa"></button>
+                <div class="descripcion-pag">
+                    <h3>sobre el producto</h3>
+                    <p class="especifi-producto">
+                        Los auriculares inalámbricos con gancho para la oreja ofrecen una experiencia de sonido estéreo HiFi, ideal para actividades deportivas. Su diseño impermeable y la inclusión de un micrófono garantizan comodidad y funcionalidad, permitiendo disfrutar de música y realizar llamadas con claridad.
+                    </p>
                 </div>
             </div>
         </div>
@@ -189,14 +147,14 @@
                     <div class="slider-contenedor-4">
                         <div class="slide-4" id="slider4">
                             <div class="slider4-contenido">
-                                <img class="slider4-imagen" src="../assets/imagenes slider 4/imagen slider 4-1.jpeg" alt="imagen slider 4">
+                                <img class="slider4-imagen" src="../../assets/imagenes slider 4/imagen slider 4-1.jpeg" alt="imagen slider 4">
                                 <div class="slider4-texto">
                                     <h3>sobre Dinamo</h3>
                                     <p>Dinamo es una empresa especializada en la venta de dispositivos electrónicos, ofreciendo cargadores, audífonos y bancos de energía de alta calidad, diseñados para satisfacer las necesidades tecnológicas de nuestros clientes.</p>
                                 </div>
                             </div>
                             <div class="slider4-contenido">
-                                <img class="slider4-imagen" src="../assets/imagenes slider 4/imagen slider 4-2.jpg" alt="imagen slider 4">
+                                <img class="slider4-imagen" src="../../assets/imagenes slider 4/imagen slider 4-2.jpg" alt="imagen slider 4">
                                 <div class="slider4-texto">
                                     <h3>nuestras instalaciones</h3>
                                     <p>La empresa cuenta con instalaciones modernas y automatizadas, equipadas con tecnología avanzada para la fabricación de nuestros productos garantizando una gran calidad y eficiencia en cada uno.</p>
@@ -204,7 +162,7 @@
                             </div>
                             <div class="slider4-contenido slide-4-sec3">
                                 <div class="slide-4-marco">
-                                    <img src="../assets/logo-dinamo.png" class="logo-dinamo-s4" alt="logo-dinamo">
+                                    <img src="../../assets/logo-dinamo.png" class="logo-dinamo-s4" alt="logo-dinamo">
                                     <div class="slider4-texto1">
                                         <h4>se el primero en saber lo nuevo de la marca.</h4>
                                         <p>ingresa tu corre, te enviaremos noticias sobre lo nuevo que hay en Dinamo.</p>
@@ -236,7 +194,7 @@
         </div>
     </main>
     <footer class="pie-de-pagina">
-        <img class="logo-footer" src="../assets/logo-dinamo.png" alt="logo">
+        <img class="logo-footer" src="../../assets/logo-dinamo.png" alt="logo">
         <div class="contactame">
             <h2 class="contactame-titulo">Contactanos</h2>
             <ul class="contactame-opciones">
@@ -249,13 +207,13 @@
         <div>
             <h2 class="titulo-redes">Redes sociales</h2>
             <div class="git-link">
-                <a href="https://es-la.facebook.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="../assets/logo redes/image.png" alt="imagen Facebook"></a>
-                <a href="https://www.instagram.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="../assets/logo redes/image (1).png" alt="imagen Instagram"></a>
+                <a href="https://es-la.facebook.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="../../assets/logo redes/image.png" alt="imagen Facebook"></a>
+                <a href="https://www.instagram.com/" class="link-social" target="_blank"><img loading="lazy"class="img-social" src="../../assets/logo redes/image (1).png" alt="imagen Instagram"></a>
             </div>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-    <script src="../script/producto.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="../../script/scripts paginas productos/pagina-producto-4.js"></script>
 </body>
 </html>
