@@ -1226,3 +1226,25 @@ a > p > s {
     width: 40vw;
     min-width: 450px;
 }
+
+/* 786px */
+
+@media screen and (max-width: 786px){
+    
+    .git-link{
+    display: flex;
+    flex-direction: column;
+}
+
+    .link-social{
+        margin-bottom: 5px;
+}
+
+    .slider{
+    height: 500px;
+}
+
+    .slider-seccion{
+    height: 500px;
+}
+}
